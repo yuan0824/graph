@@ -1,7 +1,12 @@
+package UndirectedGraphTest;
+
+import UndirectedGraph.BreadthFirstSearch;
+import UndirectedGraph.UndirectedGraph;
+
 import java.util.LinkedList;
 public class BFSTest {
     public static void main(String args[]){
-        UndirectedGraph graph = new UndirectedGraph(10);
+        UndirectedGraph graph = new UndirectedGraph(13);
         graph.addEdge(0,1);
         graph.addEdge(0,2);
         graph.addEdge(1,3);

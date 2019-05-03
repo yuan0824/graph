@@ -1,3 +1,8 @@
+package UndirectedGraphTest;
+
+import UndirectedGraph.DepthFirstSearch;
+import UndirectedGraph.UndirectedGraph;
+
 import java.util.LinkedList;
 
 public class DFSTest {

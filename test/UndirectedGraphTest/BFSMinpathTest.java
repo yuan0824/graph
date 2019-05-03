@@ -1,3 +1,8 @@
+package UndirectedGraphTest;
+
+import UndirectedGraph.BreadthFirstSearchMinPath;
+import UndirectedGraph.UndirectedGraph;
+
 import java.util.LinkedList;
 
 public class BFSMinpathTest {

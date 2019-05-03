@@ -1,3 +1,7 @@
+package UndirectedGraphTest;
+
+import UndirectedGraph.UndirectedGraph;
+
 public class UndirectedTest {
     public static void main(String args[]){
         UndirectedGraph graph = new UndirectedGraph(7);

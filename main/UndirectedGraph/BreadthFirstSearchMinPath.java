@@ -1,3 +1,5 @@
+package UndirectedGraph;
+
 import java.util.LinkedList;
 
 public class BreadthFirstSearchMinPath {
