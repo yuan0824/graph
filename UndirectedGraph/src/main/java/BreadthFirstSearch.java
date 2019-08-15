@@ -1,19 +1,26 @@
-package UndirectedGraph;
-
 import java.util.LinkedList;
 
-public class BreadthFirstSearchMinPath {
+/**
+ * 广度优先搜索，借助队列实现遍历顺序，此外可以求最短路径
+ */
+public class BreadthFirstSearch {
     private boolean[] marked;    //到达该点的最短路径是否已知
     private int[] edgeTo;        //到达该点的已知路径上的最后一个顶点
     private int s;               //起点
     private LinkedList<Integer> list;
-    public BreadthFirstSearchMinPath(UndirectedGraph graph , int s){
+    public BreadthFirstSearch(UndirectedGraph graph , int s){
         this.s = s;
         list = new LinkedList<Integer>();
         marked = new boolean[graph.getV()];
         edgeTo =new int[graph.getV()];
         bfs(graph,s);
     }
+
+    /**
+     *
+     * @param graph 无向图
+     * @param s 起点
+     */
     private void bfs(UndirectedGraph graph , int s){
         LinkedList<Integer> temp = new LinkedList<Integer>();
         marked[s] = true;
@@ -36,6 +43,11 @@ public class BreadthFirstSearchMinPath {
         return list;
     }
 
+    /**
+     * 到终点的最短路径
+     * @param v 终点
+     * @return
+     */
     public LinkedList<Integer> pathTo(int v){
         if(!marked[v]) return null;
         LinkedList<Integer> list = new LinkedList<Integer>();

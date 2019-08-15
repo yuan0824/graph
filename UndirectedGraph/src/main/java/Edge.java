@@ -1,5 +1,6 @@
-package DeliverGoods;
-
+/**
+ * 无权值的边
+ */
 public class Edge {
     private int v;               //小
     private int w;               //大

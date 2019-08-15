@@ -1,7 +1,8 @@
-package UndirectedGraph;
-
 import java.util.LinkedList;
 
+/**
+ * 深度优先算法，递归实现遍历顺序
+ */
 public class DepthFirstSearch {
     private boolean[] marked;     //该点是否被访问
     private LinkedList<Integer> edgeTo;
@@ -11,6 +12,12 @@ public class DepthFirstSearch {
         edgeTo.add(s);
         dfs(graph , s);
     }
+
+    /**
+     *
+     * @param graph 无向图
+     * @param v 起点
+     */
     private void dfs(UndirectedGraph graph , int v){
         marked[v] = true;
         for(int w : graph.adj(v)){

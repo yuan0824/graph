@@ -1,11 +1,8 @@
-package UndirectedGraphTest;
-
-import UndirectedGraph.BreadthFirstSearchMinPath;
-import UndirectedGraph.UndirectedGraph;
-
 import java.util.LinkedList;
-
-public class BFSMinpathTest {
+/**
+ * 测试无向图的广度优先遍历，求遍历路径，最短路径
+ */
+public class BFSTest {
     public static void main(String[] args){
         UndirectedGraph graph = new UndirectedGraph(10);
         graph.addEdge(0 , 1);
@@ -22,9 +19,10 @@ public class BFSMinpathTest {
         graph.addEdge(6 , 8);
         graph.addEdge(7 , 9);
         graph.addEdge(8 , 9);
-        BreadthFirstSearchMinPath bfs = new BreadthFirstSearchMinPath(graph,0);
-        LinkedList path = bfs.pathTo(8);
+        BreadthFirstSearch bfs = new BreadthFirstSearch(graph,0);
+        LinkedList path = bfs.getEdgeTo();                //遍历路径
+        LinkedList minPath = bfs.pathTo(8);            //到点8的最短路径
         System.out.println(path);
-
+        System.out.println(minPath);
     }
 }

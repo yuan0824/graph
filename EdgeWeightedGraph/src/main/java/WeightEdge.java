@@ -1,10 +1,11 @@
-package EdgeWeightedGraph;
-
-public class Edge implements Comparable<Edge>{
+/**
+ * 有权值的边
+ */
+public class WeightEdge implements Comparable<WeightEdge>{
     private int v;             //顶点之一
     private int w;             //另一个顶点
     private int weight;        //边的权重
-    public Edge(int v , int w , int weight){
+    public WeightEdge(int v , int w , int weight){
         this.v = v;
         this.w = w;
         this. weight = weight;
@@ -23,7 +24,7 @@ public class Edge implements Comparable<Edge>{
     public String toString(){
         return String.format("%d-%d %d" , v , w , weight);
     }
-    public int compareTo(Edge that){
+    public int compareTo(WeightEdge that){
         if(this.weight < that.weight) return -1;
         else if(this.weight > that.weight) return 1;
         else return 0;
